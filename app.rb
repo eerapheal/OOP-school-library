@@ -7,9 +7,10 @@ require_relative 'rental'
 
 class App
   attr_reader :people, :books, :rentals
+
   def initialize
     @people = []
-    @books =[]
+    @books = []
     @rentals = []
     @welcome_text = "\nPlease choose an option by typing number
     1- List all books
@@ -19,8 +20,9 @@ class App
     5- Create a rental
     6- List all rentals for a given person id
     7- Exit
-    " 
+    "
   end
+
   def add_person(person)
     @people.push(person)
   end
@@ -114,7 +116,7 @@ class App
     person_id = gets.chomp.to_i
     print 'Date: '
     date = gets.chomp
-    rental = Rental.new(@people[person_id], @books[book_id], date)
+    rental = Rental.new(date, @books[book_id], @people[person_id])
     add_rental(rental)
     puts 'Rental created successfully.'
   end

@@ -5,18 +5,12 @@ class Person < Nameable
   attr_accessor :name, :age
 
   def initialize(age, name = 'Unknown', parent_permission: true)
+    super()
     @id = rand(1..1000)
     @name = name
     @age = age
     @parent_permission = parent_permission
-    @rentals []
-    super()
-  end
-
-  private
-
-  def of_age?
-    @age >= 18
+    @rentals = []
   end
 
   def correct_name
@@ -29,5 +23,11 @@ class Person < Nameable
 
   def add_rental(book, date)
     Rental.new(date, book, self)
+  end
+
+  private
+
+  def of_age?
+    @age >= 18
   end
 end
