@@ -1,4 +1,4 @@
-require_relative nameable_n
+require_relative 'nameable_n'
 
 class TrimmerDecorator < Nameable
   def initialize(_nameable = Nameable.new)

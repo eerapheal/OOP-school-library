@@ -1,9 +1,9 @@
-require_relative './book'
-require_relative './classroom'
-require_relative './student_s'
-require_relative './teacher_t'
-require_relative './person_p'
-require_relative './rental'
+require_relative 'book'
+require_relative 'classroom'
+require_relative 'student_s'
+require_relative 'teacher_t'
+require_relative 'person_p'
+require_relative 'rental'
 
 class App
   attr_reader :people, :books, :rentals
