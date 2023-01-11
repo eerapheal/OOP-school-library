@@ -73,15 +73,13 @@ To run the project, run `ruby <filename>` in your terminal
 
 <!-- AUTHORS -->
 
- **Author1**
+## 👥 Authors <a name="authors"></a>
+
 👤 **Ekpenisi Erue Raphael**
 
 - GitHub: [@eerapheal](https://github.com/eerapheal)
 - Twitter: [@ekpenisiraphael](https://twitter.com/ekpenisiraphael)
 - LinkedIn: [ekpenisi-e-raphael-9678a221a](https://www.linkedin.com/in/ekpenisi-e-raphael-9678a221a/)
-
-
-## 👥 Authors <a name="authors"></a>
 
 👤 **David Amon-Cofie**
 
