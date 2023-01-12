@@ -56,4 +56,3 @@ def create_rental
   add_rental(rental)
   puts 'Rental created successfully.'
 end
-

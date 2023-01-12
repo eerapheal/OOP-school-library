@@ -22,11 +22,11 @@ module SaveData
   end
 
   def save_rentals
-    return unless File.exist?('./data_files/rental.json')
+    return unless File.exist?('./data_file/rentals.json')
     return unless @rentals.any?
 
     rentals_data = JSON.generate(@rentals, { max_nesting: false })
-    File.write('./data_files/rental.json', rentals_data)
+    File.write('./data_file/rentals.json', rentals_data)
   end
 
   def save()
@@ -69,13 +69,14 @@ module LoadData
 
   def load_rentals
     rentals = []
-    if File.exist?('./data_files/rental.json')
-      data = File.read('./data_files/rental.json')
+    if File.exist?('./data_file/rentals.json')
+      data = File.read('./data_file/rentals.json')
       if data != ''
         JSON.parse(data).map do |rental|
           person_id = rental['person']['id']
           book_id = rental['book']['id']
-          rentals.push(Rental.new(get_person(person_id), get_book(book_id), rental['date']))
+          s = Rental.new(get_person(person_id), get_book(book_id), rental['date'])
+          rentals.push(s)
         end
       end
     end
