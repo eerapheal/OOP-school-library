@@ -31,6 +31,7 @@
 ### Key Features <a name="key-features"></a>
 
 - Gitflow
+- Github flow 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
