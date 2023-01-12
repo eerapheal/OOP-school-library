@@ -6,27 +6,27 @@ require_relative 'teacher_t'
 
 module SaveData
   def save_books
-    return unless File.exist?('./data_files/books.json')
+    return unless File.exist?('./storage_files/books.json')
     return unless @books.any?
 
     books_data = JSON.generate(@books, { max_nesting: false })
-    File.write('./data_files/books.json', books_data)
+    File.write('./storage_files/books.json', books_data)
   end
 
   def save_people
-    return unless File.exist?('./data_file/people_p.json')
+    return unless File.exist?('./storage_files/people.json')
     return unless @people.any?
 
     people_data = JSON.generate(@people, { max_nesting: false })
-    File.write('./data_file/people-P.json', people_data)
+    File.write('./storage_files/people.json', people_data)
   end
 
   def save_rentals
-    return unless File.exist?('./data_file/rentals.json')
+    return unless File.exist?('./storage_files/rentals.json')
     return unless @rentals.any?
 
     rentals_data = JSON.generate(@rentals, { max_nesting: false })
-    File.write('./data_file/rentals.json', rentals_data)
+    File.write('./storage_files/rentals.json', rentals_data)
   end
 
   def save()
@@ -39,8 +39,8 @@ end
 module LoadData
   def load_books
     books = []
-    if File.exist?('./data_file/books.json')
-      data = File.read('./data_file/books.json')
+    if File.exist?('./storage_files/books.json')
+      data = File.read('./storage_files/books.json')
       if data != ''
         JSON.parse(data).map do |book|
           books.push(Book.new(book['title'], book['author'], book['id']))
@@ -52,8 +52,8 @@ module LoadData
 
   def load_people
     people = []
-    if File.exist?('./data_file/people_p.json')
-      data = File.read('./data_file/people_p.json')
+    if File.exist?('./storage_files/people.json')
+      data = File.read('./storage_files/people.json')
       if data != ''
         JSON.parse(data).map do |person|
           if person['json_class'] == 'Student'
@@ -69,8 +69,8 @@ module LoadData
 
   def load_rentals
     rentals = []
-    if File.exist?('./data_file/rentals.json')
-      data = File.read('./data_file/rentals.json')
+    if File.exist?('./storage_files/rentals.json')
+      data = File.read('./storage_files/rentals.json')
       if data != ''
         JSON.parse(data).map do |rental|
           person_id = rental['person']['id']

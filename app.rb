@@ -93,8 +93,8 @@ class App
         pick_action(number)
       elsif number == 7
         exit = true
-        puts 'Thanks for using our library app, see you soon!'
         save
+        puts 'Thanks for using our library app, see you soon!'
       else
         puts "Error friend, wrong input. Sorry I don't make the rules ¯\\(ツ)/¯"
       end
