@@ -6,11 +6,11 @@ require_relative 'teacher_t'
 
 module SaveData
   def save_books
-    return unless File.exist?('./data_file/books.json')
+    return unless File.exist?('./data_files/books.json')
     return unless @books.any?
 
     books_data = JSON.generate(@books, { max_nesting: false })
-    File.write('./data_file/books.json', books_data)
+    File.write('./data_files/books.json', books_data)
   end
 
   def save_people
@@ -18,15 +18,15 @@ module SaveData
     return unless @people.any?
 
     people_data = JSON.generate(@people, { max_nesting: false })
-    File.write('./data_file/people_p.json', people_data)
+    File.write('./data_file/people-P.json', people_data)
   end
 
   def save_rentals
-    return unless File.exist?('./data_file/rental.json')
+    return unless File.exist?('./data_files/rental.json')
     return unless @rentals.any?
 
     rentals_data = JSON.generate(@rentals, { max_nesting: false })
-    File.write('./data_file/rental.json', rentals_data)
+    File.write('./data_files/rental.json', rentals_data)
   end
 
   def save()
@@ -69,8 +69,8 @@ module LoadData
 
   def load_rentals
     rentals = []
-    if File.exist?('./data_file/rental.json')
-      data = File.read('./data_file/rental.json')
+    if File.exist?('./data_files/rental.json')
+      data = File.read('./data_files/rental.json')
       if data != ''
         JSON.parse(data).map do |rental|
           person_id = rental['person']['id']

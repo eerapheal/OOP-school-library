@@ -1,5 +1,5 @@
 class Rental
-  attr_accessor :date, :book, :person, :rentals
+  attr_accessor :date
 
   attr_reader :person, :book, :id
 
