@@ -17,7 +17,7 @@ class Student < Person
     '¯\(ツ)/¯'
   end
 
-  def to_json()
+  def to_json(*)
     {
       JSON.create_id => self.class.name,
       'id' => @id,

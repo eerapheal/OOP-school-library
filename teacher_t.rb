@@ -12,13 +12,13 @@ class Teacher < Person
     true
   end
 
-  def to_json()
+  def to_json(*)
     {
       JSON.create_id => self.class.name,
       'id' => @id,
       'name' => name,
       'age' => @age,
       'specialization' => @specialization
-    }.to_json()
+    }
   end
 end
