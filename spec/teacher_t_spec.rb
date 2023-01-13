@@ -6,12 +6,12 @@ describe Teacher do
     age = '32'
     specialization = 'developer'
     id = '57'
-    teacher = Teacher.new( age, name, specialization, id)
+    teacher = Teacher.new(age, name, specialization, id)
 
     it 'should confirm the name of the teacher' do
-        expect(teacher.name).to eq name
-      end
-      
+      expect(teacher.name).to eq name
+    end
+
     it 'should confirm the age of the teacher' do
       expect(teacher.age).to eq age
     end
@@ -21,8 +21,8 @@ describe Teacher do
     end
 
     it 'should confirm the id of the teacher' do
-        expect(teacher.id).to eq id
-      end
+      expect(teacher.id).to eq id
+    end
 
     it 'should return if a teacher can use services = true' do
       expect(teacher.can_use_services?).to eq true
