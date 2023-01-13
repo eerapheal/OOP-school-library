@@ -6,7 +6,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -32,14 +31,7 @@
 ### Key Features <a name="key-features"></a>
 
 - Gitflow
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- Github flow 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -73,15 +65,13 @@ To run the project, run `ruby <filename>` in your terminal
 
 <!-- AUTHORS -->
 
- **Author1**
+## 👥 Authors <a name="authors"></a>
+
 👤 **Ekpenisi Erue Raphael**
 
 - GitHub: [@eerapheal](https://github.com/eerapheal)
 - Twitter: [@ekpenisiraphael](https://twitter.com/ekpenisiraphael)
 - LinkedIn: [ekpenisi-e-raphael-9678a221a](https://www.linkedin.com/in/ekpenisi-e-raphael-9678a221a/)
-
-
-## 👥 Authors <a name="authors"></a>
 
 👤 **David Amon-Cofie**
 
