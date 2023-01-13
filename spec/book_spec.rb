@@ -14,11 +14,5 @@ describe Book do
     it 'should validate the author of the book' do
       expect(book.author).to eq author
     end
-
-    # it 'should add a rental properly' do
-    #   student = Student.new('NAME', 36, true)
-    #   book.add_rental(student, '1-2-2023')
-    #   expect(book.rentals.length).to eq 1
-    # end
   end
 end

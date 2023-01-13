@@ -16,12 +16,5 @@ describe 'testing person' do
       person = Person.new(12, 45, 'NAME')
       expect(person.can_use_services?).to eq true
     end
-    # it 'should  successfully add a rental to the rentals list' do
-    #   person = Person.new(12, 45, 'NAME')
-    #   book = Book.new('New Book', 'PERSON anonymous')
-    #   rental = Rental.new(person, book, '12-12-2020')
-    #   person.add_rental(rental)
-    #   expect(person.rentals.length).to eq 2
-    # end
   end
 end
