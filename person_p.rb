@@ -18,12 +18,12 @@ class Person < Nameable
 
   private :of_age?
 
-  def can_use_services?
-    of_age? || @parent_permission
-  end
-
   def correct_name
     @name
+  end
+
+  def can_use_services?
+    of_age? || @parent_permission
   end
 
   def add_rental(rental)
